@@ -50,7 +50,7 @@ export default function Faq({
                     type="button"
                     onClick={() => setOpenId(isOpen ? null : item.id)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 p-6 text-left"
+                    className="flex w-full items-center justify-between gap-4 p-6 text-left cursor-pointer"
                   >
                     <span className="font-display text-base font-semibold">
                       {item.question}

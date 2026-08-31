@@ -40,7 +40,7 @@ export default function Hero({ hero, stats }) {
               {hero.secondaryButtonLabel}
             </a>
           </div>
-          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
+          <dl className="mt-12 grid grid-cols-1 xs:grid-cols-3 gap-6 border-t border-border pt-8">
             {stats.map((s) => (
               <div key={s.id}>
                 <dt className="font-display text-2xl font-semibold text-primary">
@@ -62,7 +62,7 @@ export default function Hero({ hero, stats }) {
               height="1600"
               className="h-[30rem] w-full object-cover md:h-[38rem]"
             />
-            <div class="absolute -bottom-6 -left-6 max-w-[15rem] rounded-3xl bg-background p-5 shadow-soft">
+            <div class="absolute -bottom-6 -left-4 lg:-left-6 max-w-[15rem] rounded-3xl bg-background p-5 shadow-soft">
               <p class="font-display text-sm font-semibold">{hero.imageText}</p>
               <p class="mt-1 text-xs text-muted-foreground">
                 {hero.ImageSubText}

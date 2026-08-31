@@ -2,8 +2,8 @@ import { mediaUrl } from "../lib/strapi";
 
 export default function Doctors({ eyebrow, title, description, doctors = [] }) {
   return (
-    <section id="doctors" className="px-6 py-24 md:py-32 surface-soft">
-      <div className="mx-auto max-w-7xl">
+    <section id="doctors" className="py-24 md:py-32 surface-soft">
+      <div className="mx-auto max-w-7xl px-6">
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.34em] text-primary">
           {eyebrow}
         </p>
@@ -26,7 +26,7 @@ export default function Doctors({ eyebrow, title, description, doctors = [] }) {
                   src={mediaUrl(img?.url)}
                   alt={`Portrait of ${doctor.name}, ${doctor.role}`}
                   loading="lazy"
-                  className="h-72 w-full object-cover object-top"
+                  className="h-auto md:h-72 lg:h-85 w-full object-cover object-top"
                 />
                 <div className="p-7">
                   <h3 className="font-display text-lg font-semibold">
