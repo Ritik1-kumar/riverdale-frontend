@@ -12,7 +12,7 @@ export default function About({
 
   return (
     <section id="about" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <div className="grid gap-16 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="grid gap-16 lg:gap-10 xl:gap-16 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="">
           <p className="mb-5 text-[0.7rem] font-semibold uppercase tracking-[0.34em] text-primary">
             {eyebrow}
