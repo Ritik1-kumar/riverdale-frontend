@@ -1,7 +1,7 @@
 export default function Marquee({ items = [] }) {
   // Render the list twice back-to-back so the CSS marquee animation
   // (translateX 0 -> -50%) loops seamlessly.
-  const track = [...items, ...items];
+  const track = [...items, ...items, ...items];
 
   return (
     <div className="overflow-hidden border-y border-border bg-mist/60 py-4">

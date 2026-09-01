@@ -40,7 +40,7 @@ export default function Header({ global }) {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="http://localhost:5173/" className="flex items-center gap-3">
           <img
             src={mediaUrl(img?.url)}
             alt={img?.alternativeText || ""}
@@ -83,7 +83,7 @@ export default function Header({ global }) {
             <span className="relative flex h-4 w-5 flex-col justify-between">
               <span
                 className={`h-0.5 w-full bg-current transition-transform duration-300 ${
-                  menuOpen ? "translate-y-[7px] rotate-45" : ""
+                  menuOpen ? "translate-y-1.75 rotate-45" : ""
                 }`}
               />
               <span
@@ -93,7 +93,7 @@ export default function Header({ global }) {
               />
               <span
                 className={`h-0.5 w-full bg-current transition-transform duration-300 ${
-                  menuOpen ? "-translate-y-[7px] -rotate-45" : ""
+                  menuOpen ? "-translate-y-1.75 -rotate-45" : ""
                 }`}
               />
             </span>

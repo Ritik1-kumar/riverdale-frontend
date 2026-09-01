@@ -1,4 +1,4 @@
-import HospitalAffiliation from "./HospitalAffiliation";
+// import HospitalAffiliation from "./HospitalAffiliation";
 
 export default function Services({
   eyebrow,
@@ -41,7 +41,7 @@ export default function Services({
           ))}
         </div>
 
-        <HospitalAffiliation {...affiliation} />
+        {/* <HospitalAffiliation {...affiliation} /> */}
       </div>
     </section>
   );

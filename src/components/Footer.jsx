@@ -6,7 +6,7 @@ export default function Footer({ global }) {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="http://localhost:5173/" className="flex items-center gap-3">
           <img
             src={mediaUrl(img?.url)}
             alt={img?.alternativeText || ""}

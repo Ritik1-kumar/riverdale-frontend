@@ -2,7 +2,7 @@ export default function FinalCta({ cta }) {
   if (!cta) return null;
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <section className="mx-auto max-w-7xl px-6 py-16 md:py-32">
       <div className="">
         <div className="relative overflow-hidden rounded-[2.5rem] surface-deep px-8 py-20 text-center shadow-float md:px-16">
           <div

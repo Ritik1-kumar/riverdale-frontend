@@ -11,7 +11,7 @@ export default function Hero({ hero, stats }) {
       ></div>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-24 bottom-0 h-[28rem] w-[28rem] rounded-full bg-mist blur-3xl"
+        className="pointer-events-none absolute -right-24 bottom-0 h-112 w-md rounded-full bg-mist blur-3xl"
       ></div>
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="animate-rise">
@@ -40,7 +40,7 @@ export default function Hero({ hero, stats }) {
               {hero.secondaryButtonLabel}
             </a>
           </div>
-          <dl className="mt-12 grid grid-cols-1 xs:grid-cols-3 gap-6 border-t border-border pt-8">
+          <dl className="mt-12 grid grid-cols-1 xs:grid-cols-3 gap-6 xs:gap-1 sm:gap-6 border-t border-border pt-8">
             {stats.map((s) => (
               <div key={s.id}>
                 <dt className="font-display text-2xl font-semibold text-primary">
@@ -60,11 +60,13 @@ export default function Hero({ hero, stats }) {
               alt={image?.alternativeText || ""}
               width="1280"
               height="1600"
-              className="h-[30rem] w-full object-cover md:h-[38rem]"
+              className="h-120 w-full object-cover md:h-152"
             />
-            <div class="absolute -bottom-6 -left-4 lg:-left-6 max-w-[15rem] rounded-3xl bg-background p-5 shadow-soft">
-              <p class="font-display text-sm font-semibold">{hero.imageText}</p>
-              <p class="mt-1 text-xs text-muted-foreground">
+            <div className="absolute -bottom-6 -left-4 lg:-left-6 max-w-60 rounded-3xl bg-background p-5 shadow-soft">
+              <p className="font-display text-sm font-semibold">
+                {hero.imageText}
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground">
                 {hero.ImageSubText}
               </p>
             </div>

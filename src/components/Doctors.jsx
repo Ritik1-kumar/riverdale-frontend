@@ -20,7 +20,7 @@ export default function Doctors({ eyebrow, title, description, doctors = [] }) {
             return (
               <article
                 key={doctor.id ?? doctor.name}
-                className="overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all duration-500 hover:-translate-y-2 hover:border-accent"
+                className="overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all duration-500 hover:-translate-y-2 hover:border-accent hover:shadow-float"
               >
                 <img
                   src={mediaUrl(img?.url)}

@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import Marquee from "../components/Marquee";
 import About from "../components/About";
 import Services from "../components/Services";
-import HospitalAffiliation from "../components/HospitalAffiliation";
+// import HospitalAffiliation from "../components/HospitalAffiliation";
 import Faq from "../components/Faq";
 import Testimonials from "../components/Testimonials";
 import FinalCta from "../components/FinalCta";
@@ -45,13 +45,13 @@ export default function HomePage() {
           title={data.servicesTitle}
           description={data.servicesDescription}
           services={data.services}
-          affiliation={{
-            title: data.hospitalAffiliationTitle,
-            text: data.hospitalAffiliationText,
-            link: data.hospitalAffiliationLink,
-            linkText: data.hospitalAffiliationLinkText,
-            image: data.hospitalAffiliationImage,
-          }}
+          // affiliation={{
+          //   title: data.hospitalAffiliationTitle,
+          //   text: data.hospitalAffiliationText,
+          //   link: data.hospitalAffiliationLink,
+          //   linkText: data.hospitalAffiliationLinkText,
+          //   image: data.hospitalAffiliationImage,
+          // }}
         />
         <Doctors
           eyebrow={data.doctorsEyebrow}
