@@ -53,9 +53,22 @@ export async function getGlobal() {
   return res.data.data.attributes ?? res.data.data;
 }
 
+const aboutPagePopulate = {
+  populate: {
+    hero: { populate: "*" },
+    stats: { populate: "*" },
+    timeline: { populate: "*" },
+    physicians: { populate: { image: true, highlights: true } },
+    careSteps: { populate: "*" },
+    facilities: { populate: "*" },
+    testimonials: { populate: "*" },
+    finalCta: { populate: "*" },
+  },
+};
+
 export async function getAboutPage() {
   const res = await strapi.get("/api/about-page", {
-    params: { populate: "*" },
+    params: aboutPagePopulate,
   });
   return res.data.data.attributes ?? res.data.data;
 }
