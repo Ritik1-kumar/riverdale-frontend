@@ -8,7 +8,7 @@ export default function FinalCta({ cta }) {
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-accent/30 blur-3xl animate-float"
-          ></div>
+          />
           <h2 className="relative mx-auto max-w-3xl text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.03]">
             {cta.title}
           </h2>

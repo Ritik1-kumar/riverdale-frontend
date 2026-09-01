@@ -8,15 +8,15 @@ export default function Hero({ hero, stats }) {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full bg-sky/50 blur-3xl animate-float"
-      ></div>
+      />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-24 bottom-0 h-112 w-md rounded-full bg-mist blur-3xl"
-      ></div>
+      />
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="animate-rise">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-primary backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             {hero.eyebrow}
           </span>
           <h1 className="mt-7 text-[clamp(2.75rem,6.4vw,5.25rem)] font-semibold leading-[0.95]">
