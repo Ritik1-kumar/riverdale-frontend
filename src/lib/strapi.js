@@ -72,3 +72,19 @@ export async function getAboutPage() {
   });
   return res.data.data.attributes ?? res.data.data;
 }
+
+const whyUsPagePopulate = {
+  populate: {
+    hero: { populate: "*" },
+    stats: { populate: "*" },
+    features: { populate: { image: true, checklist: true } },
+    finalCta: { populate: "*" },
+  },
+};
+
+export async function getWhyUsPage() {
+  const res = await strapi.get("/api/why-us-page", {
+    params: whyUsPagePopulate,
+  });
+  return res.data.data.attributes ?? res.data.data;
+}

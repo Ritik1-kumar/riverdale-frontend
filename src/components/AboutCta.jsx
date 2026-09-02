@@ -13,7 +13,7 @@ export default function AboutCta({ cta }) {
       />
 
       <div className="relative mx-auto max-w-4xl px-6 text-center">
-        <h2 className="font-display text-4xl font-semibold leading-tight text-primary-foreground md:text-6xl">
+        <h2 className="font-display text-4xl font-semibold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
           {cta.title}
           {cta.titleHighlight && (
             <span className="block text-sky">{cta.titleHighlight}</span>
