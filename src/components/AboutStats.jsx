@@ -7,7 +7,7 @@ export default function AboutStats({ stats = [] }) {
             <p className="font-display text-4xl font-semibold md:text-5xl">
               {stat.value}
             </p>
-            <p className="mt-2 text-[0.7rem] uppercase tracking-[0.2em] text-sky/80">
+            <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-sky/80">
               {stat.label}
             </p>
           </div>
