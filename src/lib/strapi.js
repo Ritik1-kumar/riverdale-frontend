@@ -53,6 +53,11 @@ export async function getGlobal() {
   return res.data.data.attributes ?? res.data.data;
 }
 
+export async function getInsurancePlans() {
+  const res = await strapi.get("/api/insurance-plans");
+  return res.data.data.map((item) => item.attributes?.name ?? item.name);
+}
+
 const aboutPagePopulate = {
   populate: {
     hero: { populate: "*" },
@@ -85,6 +90,21 @@ const whyUsPagePopulate = {
 export async function getWhyUsPage() {
   const res = await strapi.get("/api/why-us-page", {
     params: whyUsPagePopulate,
+  });
+  return res.data.data.attributes ?? res.data.data;
+}
+
+const servicesPagePopulate = {
+  populate: {
+    hero: { populate: "*" },
+    services: { populate: { image: true, checklist: true } },
+    finalCta: { populate: "*" },
+  },
+};
+
+export async function getServicesPage() {
+  const res = await strapi.get("/api/services-page", {
+    params: servicesPagePopulate,
   });
   return res.data.data.attributes ?? res.data.data;
 }

@@ -2,6 +2,8 @@ export default function Insurance({
   eyebrow,
   title,
   description,
+  cardTitle,
+  cardText,
   plans = [],
   phone,
   phoneLink,
@@ -9,21 +11,20 @@ export default function Insurance({
   return (
     <section id="insurance" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
       <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
-        <div className="">
+        <div>
           <p className="mb-5 text-[0.7rem] font-semibold uppercase tracking-[0.34em] text-primary">
             {eyebrow}
           </p>
-          <h2 className="text-[clamp(2rem,3.4vw,3rem)] font-semibold leading-[1.05]">
+          <h2 className="font-display text-[clamp(2rem,3.4vw,3rem)] font-semibold leading-[1.05]">
             {title}
           </h2>
           <p className="mt-5 leading-relaxed text-muted-foreground">
             {description}
           </p>
+
           <div className="mt-8 rounded-3xl bg-mist p-6">
-            <p className="text-sm font-semibold">Questions about coverage?</p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Contact us to verify your insurance before your visit.
-            </p>
+            <p className="text-sm font-semibold">{cardTitle}</p>
+            <p className="mt-2 text-sm text-muted-foreground">{cardText}</p>
             <a
               href={phoneLink}
               className="mt-4 inline-block font-display text-lg text-primary"
@@ -32,7 +33,8 @@ export default function Insurance({
             </a>
           </div>
         </div>
-        <div className="">
+
+        <div>
           <ul className="flex flex-wrap gap-2.5">
             {plans.map((plan) => (
               <li

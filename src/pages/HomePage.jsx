@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { getHomepage, getGlobal } from "../lib/strapi";
+import { getHomepage, getGlobal, getInsurancePlans } from "../lib/strapi";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Marquee from "../components/Marquee";
 import About from "../components/About";
 import Services from "../components/Services";
+import Insurance from "../components/Insurance";
 // import HospitalAffiliation from "../components/HospitalAffiliation";
 import Faq from "../components/Faq";
 import Testimonials from "../components/Testimonials";
@@ -18,10 +19,13 @@ export default function HomePage() {
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
-    Promise.all([getHomepage(), getGlobal()]).then(([home, glob]) => {
-      setData(home);
-      setGlobal(glob);
-    });
+    Promise.all([getHomepage(), getGlobal(), getInsurancePlans()]).then(
+      ([home, glob, insurancePlans]) => {
+        setData(home);
+        setGlobal(glob);
+        setPlans(insurancePlans);
+      },
+    );
   }, []);
 
   if (!data || !global) return <div className="p-10 text-center">Loading…</div>;
@@ -52,6 +56,16 @@ export default function HomePage() {
           //   linkText: data.hospitalAffiliationLinkText,
           //   image: data.hospitalAffiliationImage,
           // }}
+        />
+        <Insurance
+          eyebrow={data.insuranceEyebrow}
+          title={data.insuranceTitle}
+          description={data.insuranceDescription}
+          cardTitle={data.insuranceCardTitle}
+          cardText={data.insuranceCardText}
+          plans={plans}
+          phone={global.phone}
+          phoneLink={global.phoneLink}
         />
         <Doctors
           eyebrow={data.doctorsEyebrow}

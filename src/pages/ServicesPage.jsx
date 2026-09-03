@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
-import { getWhyUsPage, getGlobal } from "../lib/strapi";
+import { getServicesPage, getGlobal } from "../lib/strapi";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import AboutHero from "../components/AboutHero";
-import AboutStats from "../components/AboutStats";
-import WhyFeatures from "../components/WhyFeatures";
+import ServicesHero from "../components/ServicesHero";
+import ServicesList from "../components/ServicesList";
 import FinalCta from "../components/FinalCta";
 
-export default function WhyUsPage() {
+export default function ServicesPage() {
   const [data, setData] = useState(null);
   const [global, setGlobal] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    Promise.all([getWhyUsPage(), getGlobal()])
-      .then(([whyUs, glob]) => {
-        setData(whyUs);
+    Promise.all([getServicesPage(), getGlobal()])
+      .then(([services, glob]) => {
+        setData(services);
         setGlobal(glob);
       })
       .catch((err) => {
@@ -36,9 +35,12 @@ export default function WhyUsPage() {
     <>
       <Header global={global} />
       <main id="top">
-        <AboutHero hero={data.hero} />
-        <AboutStats stats={data.stats} />
-        <WhyFeatures features={data.features} />
+        <ServicesHero hero={data.hero} services={data.services} />
+        <ServicesList
+          services={data.services}
+          bookAVisitLabel={global.bookAVisitLabel}
+          bookAVisitLink={global.bookAVisitLink}
+        />
         <FinalCta cta={data.finalCta} />
       </main>
       <Footer global={global} />
