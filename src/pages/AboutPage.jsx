@@ -9,7 +9,7 @@ import Physicians from "../components/Physicians.jsx";
 import CareSteps from "../components/CareSteps";
 import Facilities from "../components/Facilities";
 import AboutTestimonials from "../components/AboutTestimonials";
-import AboutCta from "../components/AboutCta";
+import FinalCta from "../components/FinalCta";
 
 export default function AboutPage() {
   const [data, setData] = useState(null);
@@ -72,7 +72,7 @@ export default function AboutPage() {
           titleHighlight={data.testimonialsTitleHighlight}
           testimonials={data.testimonials}
         />
-        <AboutCta cta={data.finalCta} />
+        <FinalCta cta={data.finalCta} />
       </main>
       <Footer global={global} />
     </>

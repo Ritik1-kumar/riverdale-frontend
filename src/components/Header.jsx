@@ -119,7 +119,7 @@ export default function Header({ global }) {
             </a>
           ))}
           <a
-            href={global.phoneLink}
+            href={global.bookAVisitLink}
             onClick={() => setMenuOpen(false)}
             className="mt-5 rounded-full surface-deep px-5 py-3 text-center text-sm font-semibold shadow-soft"
           >

@@ -11,6 +11,9 @@ export default function FinalCta({ cta }) {
           />
           <h2 className="relative mx-auto max-w-3xl text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.03]">
             {cta.title}
+            {cta.titleHighlight && (
+              <span className="block text-sky">{cta.titleHighlight}</span>
+            )}
           </h2>
           <p className="relative mt-5 text-sky">{cta.subtitle}</p>
           <div className="relative mt-9 flex flex-wrap justify-center gap-4">
