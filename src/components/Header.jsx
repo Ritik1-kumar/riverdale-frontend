@@ -66,7 +66,7 @@ export default function Header({ global }) {
 
         <div className="flex items-center gap-3">
           <a
-            href={global.phoneLink}
+            href={global.bookAVisitLink}
             className="hidden rounded-full surface-deep px-5 py-2.5 text-sm font-semibold shadow-soft transition-transform duration-300 hover:-translate-y-0.5 sm:inline-block"
           >
             {global.bookAVisitLabel}

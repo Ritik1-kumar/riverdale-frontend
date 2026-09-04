@@ -53,6 +53,8 @@ export default function AboutPage() {
           title={data.physiciansTitle}
           titleHighlight={data.physiciansTitleHighlight}
           physicians={data.physicians}
+          physicianslinkLabel={data.physicianslinkLabel}
+          physicianslink={data.physicianslink}
         />
         <CareSteps
           eyebrow={data.careEyebrow}

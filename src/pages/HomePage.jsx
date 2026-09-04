@@ -72,6 +72,8 @@ export default function HomePage() {
           title={data.doctorsTitle}
           description={data.doctorsDescription}
           doctors={data.doctors}
+          link={data.doctorlink}
+          linkLabel={data.doctorLinkLabel}
         />
         <Faq
           eyebrow={data.faqEyebrow}
