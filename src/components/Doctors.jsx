@@ -1,6 +1,13 @@
 import { mediaUrl } from "../lib/strapi";
 
-export default function Doctors({ eyebrow, title, description, doctors = [] }) {
+export default function Doctors({
+  eyebrow,
+  title,
+  description,
+  doctors,
+  link,
+  linkLabel = [],
+}) {
   return (
     <section id="doctors" className="py-24 md:py-32 surface-soft">
       <div className="mx-auto max-w-7xl px-6">
@@ -14,7 +21,7 @@ export default function Doctors({ eyebrow, title, description, doctors = [] }) {
           {description}
         </p>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="my-12 grid gap-8 md:grid-cols-2">
           {doctors.map((doctor) => {
             const img = doctor.image;
             return (
@@ -53,6 +60,12 @@ export default function Doctors({ eyebrow, title, description, doctors = [] }) {
             );
           })}
         </div>
+        <a
+          href={link}
+          className="rounded-full surface-deep px-7 py-3.5 text-sm font-semibold shadow-float transition-transform duration-300 hover:-translate-y-1"
+        >
+          {linkLabel}
+        </a>
       </div>
     </section>
   );

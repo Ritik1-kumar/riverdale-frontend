@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import WhyUsPage from "./pages/WhyUsPage";
 import ServicesPage from "./pages/ServicesPage";
+import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/why-us" element={<WhyUsPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        {/* add one Route + one Strapi Single Type per new page */}
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   );

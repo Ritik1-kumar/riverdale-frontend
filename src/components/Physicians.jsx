@@ -4,7 +4,9 @@ export default function Physicians({
   eyebrow,
   title,
   titleHighlight,
-  physicians = [],
+  physicians,
+  physicianslink,
+  physicianslinkLabel = [],
 }) {
   return (
     <section className="surface-soft py-24 md:py-32">
@@ -17,7 +19,7 @@ export default function Physicians({
           <span className="text-gradient">{titleHighlight}</span>
         </h2>
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-2">
+        <div className="my-16 grid gap-12 lg:grid-cols-2">
           {physicians.map((doc) => {
             const img = doc.image;
             return (
@@ -61,6 +63,12 @@ export default function Physicians({
             );
           })}
         </div>
+        <a
+          href={physicianslink}
+          className="rounded-full surface-deep px-7 py-3.5 text-sm font-semibold shadow-float transition-transform duration-300 hover:-translate-y-1"
+        >
+          {physicianslinkLabel}
+        </a>
       </div>
     </section>
   );

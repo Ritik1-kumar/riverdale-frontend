@@ -108,3 +108,18 @@ export async function getServicesPage() {
   });
   return res.data.data.attributes ?? res.data.data;
 }
+
+const contactPagePopulate = {
+  populate: {
+    hero: { populate: "*" },
+    doctors: { populate: { opdDays: { populate: { timeSlots: true } } } },
+    clinicHours: { populate: "*" },
+  },
+};
+
+export async function getContactPage() {
+  const res = await strapi.get("/api/contact-page", {
+    params: contactPagePopulate,
+  });
+  return res.data.data.attributes ?? res.data.data;
+}
