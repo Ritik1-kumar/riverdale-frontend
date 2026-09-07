@@ -15,7 +15,9 @@ export default function FinalCta({ cta }) {
               <span className="block text-sky">{cta.titleHighlight}</span>
             )}
           </h2>
-          <p className="relative mt-5 text-sky">{cta.subtitle}</p>
+          <p className="relative mt-5 mx-auto max-w-3xl text-sky">
+            {cta.subtitle}
+          </p>
           <div className="relative mt-9 flex flex-wrap justify-center gap-4">
             <a
               href={cta.primaryButtonLink}
