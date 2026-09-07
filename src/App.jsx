@@ -4,6 +4,8 @@ import AboutPage from "./pages/AboutPage";
 import WhyUsPage from "./pages/WhyUsPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
+import TeamPage from "./pages/TeamPage";
+import PatientsPage from "./pages/PatientsPage";
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
         <Route path="/why-us" element={<WhyUsPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/patients" element={<PatientsPage />} />
       </Routes>
     </BrowserRouter>
   );

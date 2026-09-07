@@ -123,3 +123,33 @@ export async function getContactPage() {
   });
   return res.data.data.attributes ?? res.data.data;
 }
+
+const teamPagePopulate = {
+  populate: {
+    hero: { populate: "*" },
+    teamMembers: { populate: { image: true } },
+    finalCta: { populate: "*" },
+  },
+};
+
+export async function getTeamPage() {
+  const res = await strapi.get("/api/team-page", { params: teamPagePopulate });
+  return res.data.data.attributes ?? res.data.data;
+}
+
+const patientsPagePopulate = {
+  populate: {
+    hero: { populate: "*" },
+    stats: { populate: "*" },
+    transformations: { populate: "*" },
+    testimonials: { populate: "*" },
+    finalCta: { populate: "*" },
+  },
+};
+
+export async function getPatientsPage() {
+  const res = await strapi.get("/api/patients-page", {
+    params: patientsPagePopulate,
+  });
+  return res.data.data.attributes ?? res.data.data;
+}

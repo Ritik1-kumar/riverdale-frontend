@@ -40,18 +40,20 @@ export default function Hero({ hero, stats }) {
               {hero.secondaryButtonLabel}
             </a>
           </div>
-          <dl className="mt-12 grid grid-cols-1 xs:grid-cols-3 gap-6 xs:gap-1 sm:gap-6 border-t border-border pt-8">
-            {stats.map((s) => (
-              <div key={s.id}>
-                <dt className="font-display text-2xl font-semibold text-primary">
-                  {s.value}
-                </dt>
-                <dd className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                  {s.label}
-                </dd>
-              </div>
-            ))}
-          </dl>
+          {stats?.length > 0 && (
+            <dl className="mt-12 grid grid-cols-1 xs:grid-cols-3 gap-6 xs:gap-1 sm:gap-6 border-t border-border pt-8">
+              {stats.map((s) => (
+                <div key={s.id}>
+                  <dt className="font-display text-2xl font-semibold text-primary">
+                    {s.value}
+                  </dt>
+                  <dd className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                    {s.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )}
         </div>
         <div className="relative">
           <div className="overflow-hidden rounded-[2.5rem] shadow-float">
@@ -62,14 +64,16 @@ export default function Hero({ hero, stats }) {
               height="1600"
               className="h-120 w-full object-cover md:h-152"
             />
-            <div className="absolute -bottom-6 -left-4 lg:-left-6 max-w-60 rounded-3xl bg-background p-5 shadow-soft">
-              <p className="font-display text-sm font-semibold">
-                {hero.imageText}
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground">
-                {hero.ImageSubText}
-              </p>
-            </div>
+            {hero.imageText && (
+              <div className="absolute -bottom-6 -left-4 lg:-left-6 max-w-60 rounded-3xl bg-background p-5 shadow-soft">
+                <p className="font-display text-sm font-semibold">
+                  {hero.imageText}
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  {hero.ImageSubText}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
