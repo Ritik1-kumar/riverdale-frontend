@@ -35,10 +35,13 @@ export default function TeamMembers({ teamMembers = [] }) {
               </div>
 
               <div className={isReversed ? "md:order-1" : undefined}>
-                {/* <p className="text-[0.7rem] font-semibold uppercase tracking-[0.34em] text-primary">
+                <p className="mb-2 font-display text-3xl md:text-4xl font-semibold text-foreground">
+                  {member.name}
+                </p>
+                <p className="text-[0.7rem] mb-6 font-semibold uppercase tracking-[0.34em] text-primary">
                   {member.specialty}
-                </p> */}
-                <h2 className="mt-4 font-display text-3xl font-semibold leading-tight md:text-4xl">
+                </p>
+                <h2 className="mt-4 font-display text-lg font-semibold leading-tight md:text-xl">
                   {member.heading}
                 </h2>
                 <p className="mt-3 font-display text-lg leading-snug text-accent">
@@ -49,9 +52,6 @@ export default function TeamMembers({ teamMembers = [] }) {
                     <p key={i}>{para}</p>
                   ))}
                 </div>
-                {/* <p className="mt-6 font-display text-sm font-semibold text-foreground">
-                  {member.name}
-                </p> */}
               </div>
             </div>
           </section>
