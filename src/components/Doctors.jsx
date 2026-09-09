@@ -62,7 +62,7 @@ export default function Doctors({
           })}
         </div>
         <Link
-          href={link}
+          to={link}
           className="rounded-full surface-deep px-7 py-3.5 text-sm font-semibold shadow-float transition-transform duration-300 hover:-translate-y-1"
         >
           {linkLabel}

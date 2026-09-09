@@ -33,7 +33,7 @@ export default function Services({
                   {service.description}
                 </p>
                 <Link
-                  href={service.link}
+                  to={service.link}
                   className="mt-6 inline-block text-sm font-semibold text-accent opacity-0 transition-all duration-500 group-hover:opacity-100"
                 >
                   Learn more →

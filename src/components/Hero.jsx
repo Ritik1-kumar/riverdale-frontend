@@ -29,13 +29,13 @@ export default function Hero({ hero, stats }) {
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
-              href={hero.primaryButtonLink}
+              to={hero.primaryButtonLink}
               className="rounded-full surface-deep px-7 py-3.5 text-sm font-semibold shadow-float transition-transform duration-300 hover:-translate-y-1"
             >
               {hero.primaryButtonLabel}
             </Link>
             <Link
-              href={hero.secondaryButtonLink}
+              to={hero.secondaryButtonLink}
               className="rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-primary"
             >
               {hero.secondaryButtonLabel}

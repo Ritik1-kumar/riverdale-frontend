@@ -22,13 +22,13 @@ export default function FinalCta({ cta }) {
           </p>
           <div className="relative mt-9 flex flex-wrap justify-center gap-4">
             <Link
-              href={cta.primaryButtonLink}
+              to={cta.primaryButtonLink}
               className="rounded-full bg-background px-8 py-3.5 text-sm font-semibold text-primary transition-transform duration-300 hover:-translate-y-1"
             >
               {cta.primaryButtonLabel}
             </Link>
             <Link
-              href={cta.secondaryButtonLink}
+              to={cta.secondaryButtonLink}
               className="rounded-full border border-white/30 px-8 py-3.5 text-sm font-semibold transition-colors hover:bg-white/10"
             >
               {cta.secondaryButtonLabel}

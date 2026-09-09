@@ -65,7 +65,7 @@ export default function Physicians({
           })}
         </div>
         <Link
-          href={physicianslink}
+          to={physicianslink}
           className="rounded-full surface-deep px-7 py-3.5 text-sm font-semibold shadow-float transition-transform duration-300 hover:-translate-y-1"
         >
           {physicianslinkLabel}

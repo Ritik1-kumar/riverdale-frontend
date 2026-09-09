@@ -114,7 +114,7 @@ export default function ServicesList({
                 </ul>
 
                 <Link
-                  href={bookAVisitLink}
+                  to={bookAVisitLink}
                   className={
                     isDark
                       ? "mt-10 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink shadow-float transition-transform duration-300 hover:-translate-y-0.5"

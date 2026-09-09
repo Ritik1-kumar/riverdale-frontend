@@ -20,7 +20,7 @@ export default function ContactDetails({
       </p>
 
       <Link
-        href={phoneLink}
+        to={phoneLink}
         className="mt-5 flex items-center gap-3 rounded-2xl bg-mist/60 p-4 transition-transform duration-300 hover:-translate-y-0.5"
       >
         <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
@@ -33,7 +33,7 @@ export default function ContactDetails({
       </Link>
 
       <Link
-        href={mapsUrl}
+        to={mapsUrl}
         target="_blank"
         rel="noreferrer"
         className="mt-3 flex items-center gap-3 rounded-2xl bg-mist/60 p-4 transition-transform duration-300 hover:-translate-y-0.5"

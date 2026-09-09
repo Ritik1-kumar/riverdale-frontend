@@ -28,7 +28,7 @@ export default function Insurance({
             <p className="text-sm font-semibold">{cardTitle}</p>
             <p className="mt-2 text-sm text-muted-foreground">{cardText}</p>
             <Link
-              href={phoneLink}
+              to={phoneLink}
               className="mt-4 inline-block font-display text-lg text-primary"
             >
               {phone}

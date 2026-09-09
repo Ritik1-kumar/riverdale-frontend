@@ -57,7 +57,7 @@ export default function Header({ global }) {
           {links.map((link) => (
             <Link
               key={link.id ?? link.url}
-              href={link.url}
+              to={link.url}
               className="text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
@@ -67,7 +67,7 @@ export default function Header({ global }) {
 
         <div className="flex items-center gap-3">
           <Link
-            href={global.bookAVisitLink}
+            to={global.bookAVisitLink}
             className="hidden rounded-full surface-deep px-5 py-2.5 text-sm font-semibold shadow-soft transition-transform duration-300 hover:-translate-y-0.5 sm:inline-block"
           >
             {global.bookAVisitLabel}
@@ -112,7 +112,7 @@ export default function Header({ global }) {
           {links.map((link) => (
             <Link
               key={link.id ?? link.url}
-              href={link.url}
+              to={link.url}
               onClick={() => setMenuOpen(false)}
               className="rounded-lg px-3 py-2 text-base text-center font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-primary"
             >
@@ -120,7 +120,7 @@ export default function Header({ global }) {
             </Link>
           ))}
           <Link
-            href={global.bookAVisitLink}
+            to={global.bookAVisitLink}
             onClick={() => setMenuOpen(false)}
             className="mt-5 rounded-full surface-deep px-5 py-3 text-center text-sm font-semibold shadow-soft"
           >

@@ -18,7 +18,7 @@ export default function HospitalAffiliation({
           <p className="mt-4 leading-relaxed text-sky">{text}</p>
           {link && (
             <Link
-              href={link}
+              to={link}
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-block text-sm font-semibold text-accent"

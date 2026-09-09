@@ -8,7 +8,7 @@ export default function Footer({ global }) {
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
         <Link
-          href="https://riverdale-health.netlify.app/"
+          to="https://riverdale-health.netlify.app/"
           className="flex items-center gap-3"
         >
           <img
@@ -21,7 +21,7 @@ export default function Footer({ global }) {
           />
         </Link>
         <p>{global.address}</p>
-        <Link href="tel:5616378383" className="text-primary">
+        <Link to="tel:5616378383" className="text-primary">
           {global.phone}
         </Link>
       </div>
