@@ -1,96 +1,76 @@
-import { useEffect, useState } from "react";
-import { getHomepage, getGlobal, getInsurancePlans } from "../lib/strapi";
+import { useSiteData } from "../context/SiteDataContext";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Marquee from "../components/Marquee";
 import About from "../components/About";
 import Services from "../components/Services";
-import Insurance from "../components/Insurance";
-// import HospitalAffiliation from "../components/HospitalAffiliation";
+import Doctors from "../components/Doctors";
 import Faq from "../components/Faq";
+import Insurance from "../components/Insurance";
 import Testimonials from "../components/Testimonials";
 import FinalCta from "../components/FinalCta";
 import Footer from "../components/Footer";
-import Doctors from "../components/Doctors";
 
 export default function HomePage() {
-  const [data, setData] = useState(null);
-  const [global, setGlobal] = useState(null);
-  const [plans, setPlans] = useState([]);
-
-  useEffect(() => {
-    Promise.all([getHomepage(), getGlobal(), getInsurancePlans()]).then(
-      ([home, glob, insurancePlans]) => {
-        setData(home);
-        setGlobal(glob);
-        setPlans(insurancePlans);
-      },
-    );
-  }, []);
-
-  if (!data || !global) return <div className="p-10 text-center">Loading…</div>;
+  const { data } = useSiteData();
+  const { global, homepage: home, insurancePlans: plans } = data;
 
   return (
     <>
       <Header global={global} />
-      <main>
-        <Hero hero={data.hero} stats={data.stats} />
-        <Marquee items={data.marqueeItems} />
+      <main id="top">
+        <Hero hero={home.hero} stats={home.stats} />
+        <Marquee items={home.marqueeItems} />
         <About
-          eyebrow={data.aboutEyebrow}
-          title={data.aboutTitle}
-          description={data.aboutDescription}
-          description2={data.aboutDescription2}
-          image={data.aboutImage}
-          features={data.aboutFeatures}
+          eyebrow={home.aboutEyebrow}
+          title={home.aboutTitle}
+          description={home.aboutDescription}
+          description2={home.aboutDescription2}
+          image={home.aboutImage}
+          features={home.aboutFeatures}
         />
         <Services
-          eyebrow={data.servicesEyebrow}
-          title={data.servicesTitle}
-          description={data.servicesDescription}
-          services={data.services}
-          // affiliation={{
-          //   title: data.hospitalAffiliationTitle,
-          //   text: data.hospitalAffiliationText,
-          //   link: data.hospitalAffiliationLink,
-          //   linkText: data.hospitalAffiliationLinkText,
-          //   image: data.hospitalAffiliationImage,
-          // }}
+          eyebrow={home.servicesEyebrow}
+          title={home.servicesTitle}
+          description={home.servicesDescription}
+          services={home.services}
+          affiliation={{
+            title: home.hospitalAffiliationTitle,
+            text: home.hospitalAffiliationText,
+            link: home.hospitalAffiliationLink,
+            image: home.hospitalAffiliationImage,
+          }}
+        />
+        <Doctors
+          eyebrow={home.doctorsEyebrow}
+          title={home.doctorsTitle}
+          description={home.doctorsDescription}
+          doctors={home.doctors}
         />
         <Insurance
-          eyebrow={data.insuranceEyebrow}
-          title={data.insuranceTitle}
-          description={data.insuranceDescription}
-          cardTitle={data.insuranceCardTitle}
-          cardText={data.insuranceCardText}
+          eyebrow={home.insuranceEyebrow}
+          title={home.insuranceTitle}
+          description={home.insuranceDescription}
           plans={plans}
           phone={global.phone}
           phoneLink={global.phoneLink}
         />
-        <Doctors
-          eyebrow={data.doctorsEyebrow}
-          title={data.doctorsTitle}
-          description={data.doctorsDescription}
-          doctors={data.doctors}
-          link={data.doctorlink}
-          linkLabel={data.doctorLinkLabel}
-        />
         <Faq
-          eyebrow={data.faqEyebrow}
-          title={data.faqTitle}
-          description={data.faqDescription}
-          cardTitle={data.faqCardTitle}
-          cardText={data.faqCardText}
-          faqs={data.faqs}
+          eyebrow={home.faqEyebrow}
+          title={home.faqTitle}
+          description={home.faqDescription}
+          cardTitle={home.faqCardTitle}
+          cardText={home.faqCardText}
+          faqs={home.faqs}
           phone={global.phone}
           phoneLink={global.phoneLink}
         />
         <Testimonials
-          eyebrow={data.testimonialsEyebrow}
-          title={data.testimonialsTitle}
-          testimonials={data.testimonials}
+          eyebrow={home.testimonialsEyebrow}
+          title={home.testimonialsTitle}
+          testimonials={home.testimonials}
         />
-        <FinalCta cta={data.finalCta} />
+        <FinalCta cta={home.finalCta} />
       </main>
       <Footer global={global} />
     </>
