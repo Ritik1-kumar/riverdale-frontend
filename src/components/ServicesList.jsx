@@ -1,5 +1,6 @@
 import { Check, ArrowRight } from "lucide-react";
 import { mediaUrl } from "../lib/strapi";
+import { Link } from "react-router-dom";
 
 export default function ServicesList({
   services = [],
@@ -112,7 +113,7 @@ export default function ServicesList({
                   ))}
                 </ul>
 
-                <a
+                <Link
                   href={bookAVisitLink}
                   className={
                     isDark
@@ -122,7 +123,7 @@ export default function ServicesList({
                 >
                   {bookAVisitLabel}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
+                </Link>
               </div>
             </div>
           </section>

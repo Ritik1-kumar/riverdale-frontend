@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { mediaUrl } from "../lib/strapi";
 
 export default function Physicians({
@@ -63,12 +64,12 @@ export default function Physicians({
             );
           })}
         </div>
-        <a
+        <Link
           href={physicianslink}
           className="rounded-full surface-deep px-7 py-3.5 text-sm font-semibold shadow-float transition-transform duration-300 hover:-translate-y-1"
         >
           {physicianslinkLabel}
-        </a>
+        </Link>
       </div>
     </section>
   );

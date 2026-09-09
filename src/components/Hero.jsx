@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { mediaUrl } from "../lib/strapi";
 
 export default function Hero({ hero, stats }) {
@@ -27,18 +28,18 @@ export default function Hero({ hero, stats }) {
             {hero.description}
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a
+            <Link
               href={hero.primaryButtonLink}
               className="rounded-full surface-deep px-7 py-3.5 text-sm font-semibold shadow-float transition-transform duration-300 hover:-translate-y-1"
             >
               {hero.primaryButtonLabel}
-            </a>
-            <a
+            </Link>
+            <Link
               href={hero.secondaryButtonLink}
               className="rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-primary"
             >
               {hero.secondaryButtonLabel}
-            </a>
+            </Link>
           </div>
           {stats?.length > 0 && (
             <dl className="mt-12 grid grid-cols-1 xs:grid-cols-3 gap-6 xs:gap-1 sm:gap-6 border-t border-border pt-8">

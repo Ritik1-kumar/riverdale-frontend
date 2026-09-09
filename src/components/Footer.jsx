@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { mediaUrl } from "../lib/strapi";
 
 export default function Footer({ global }) {
@@ -6,7 +7,7 @@ export default function Footer({ global }) {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-        <a
+        <Link
           href="https://riverdale-health.netlify.app/"
           className="flex items-center gap-3"
         >
@@ -18,11 +19,11 @@ export default function Footer({ global }) {
             height="723"
             className="h-12 w-auto object-contain"
           />
-        </a>
+        </Link>
         <p>{global.address}</p>
-        <a href="tel:5616378383" className="text-primary">
+        <Link href="tel:5616378383" className="text-primary">
           {global.phone}
-        </a>
+        </Link>
       </div>
     </footer>
   );

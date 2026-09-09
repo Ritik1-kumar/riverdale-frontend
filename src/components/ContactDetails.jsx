@@ -1,4 +1,5 @@
 import { Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ContactDetails({
   phone,
@@ -18,7 +19,7 @@ export default function ContactDetails({
         {heading}
       </p>
 
-      <a
+      <Link
         href={phoneLink}
         className="mt-5 flex items-center gap-3 rounded-2xl bg-mist/60 p-4 transition-transform duration-300 hover:-translate-y-0.5"
       >
@@ -29,9 +30,9 @@ export default function ContactDetails({
           </span>
           <span className="font-semibold">{phone}</span>
         </span>
-      </a>
+      </Link>
 
-      <a
+      <Link
         href={mapsUrl}
         target="_blank"
         rel="noreferrer"
@@ -44,7 +45,7 @@ export default function ContactDetails({
           </span>
           <span className="font-semibold">{address}</span>
         </span>
-      </a>
+      </Link>
     </div>
   );
 }

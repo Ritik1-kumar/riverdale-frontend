@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function AboutCta({ cta }) {
   if (!cta) return null;
 
@@ -23,18 +25,18 @@ export default function AboutCta({ cta }) {
           {cta.subtitle}
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
+          <Link
             href={cta.primaryButtonLink}
             className="rounded-full bg-background px-8 py-4 text-sm font-semibold text-foreground shadow-float transition-transform duration-300 hover:-translate-y-1"
           >
             {cta.primaryButtonLabel}
-          </a>
-          <a
+          </Link>
+          <Link
             href={cta.secondaryButtonLink}
             className="rounded-full border border-sky/40 px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:border-sky hover:text-sky"
           >
             {cta.secondaryButtonLabel}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

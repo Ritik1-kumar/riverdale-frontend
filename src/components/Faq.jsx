@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Faq({
   eyebrow,
@@ -29,12 +30,12 @@ export default function Faq({
           <div className="mt-8 rounded-3xl bg-mist p-6">
             <p className="text-sm font-semibold">{cardTitle}</p>
             <p className="mt-2 text-sm text-muted-foreground">{cardText}</p>
-            <a
+            <Link
               href={phoneLink}
               className="mt-4 inline-block font-display text-lg text-primary"
             >
               {phone}
-            </a>
+            </Link>
           </div>
         </div>
         <div className="">

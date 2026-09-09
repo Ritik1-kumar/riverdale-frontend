@@ -1,5 +1,7 @@
 // import HospitalAffiliation from "./HospitalAffiliation";
 
+import { Link } from "react-router-dom";
+
 export default function Services({
   eyebrow,
   title,
@@ -30,12 +32,12 @@ export default function Services({
                 <p className="mt-3 text-sm leading-relaxed text-sky/85">
                   {service.description}
                 </p>
-                <a
+                <Link
                   href={service.link}
                   className="mt-6 inline-block text-sm font-semibold text-accent opacity-0 transition-all duration-500 group-hover:opacity-100"
                 >
                   Learn more →
-                </a>
+                </Link>
               </article>
             </div>
           ))}

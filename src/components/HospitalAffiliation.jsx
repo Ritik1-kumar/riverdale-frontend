@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { mediaUrl } from "../lib/strapi";
 
 export default function HospitalAffiliation({
@@ -16,14 +17,14 @@ export default function HospitalAffiliation({
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-4 leading-relaxed text-sky">{text}</p>
           {link && (
-            <a
+            <Link
               href={link}
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-block text-sm font-semibold text-accent"
             >
               {linkText} →
-            </a>
+            </Link>
           )}
         </div>
         <img
