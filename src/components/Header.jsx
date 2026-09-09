@@ -40,7 +40,10 @@ export default function Header({ global }) {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <a href="http://localhost:5173/" className="flex items-center gap-3">
+        <a
+          href="https://riverdale-health.netlify.app/"
+          className="flex items-center gap-3"
+        >
           <img
             src={mediaUrl(img?.url)}
             alt={img?.alternativeText || ""}
