@@ -8,7 +8,7 @@ import Physicians from "../components/Physicians";
 import CareSteps from "../components/CareSteps";
 import Facilities from "../components/Facilities";
 import AboutTestimonials from "../components/AboutTestimonials";
-import AboutCta from "../components/AboutCta";
+import FinalCta from "../components/FinalCta";
 
 export default function AboutPage() {
   const { data } = useSiteData();
@@ -31,8 +31,8 @@ export default function AboutPage() {
           title={data_.physiciansTitle}
           titleHighlight={data_.physiciansTitleHighlight}
           physicians={data_.physicians}
-          physicianslinkLabel={data.physicianslinkLabel}
-          physicianslink={data.physicianslink}
+          physicianslink={data_.physicianslink}
+          physicianslinkLabel={data_.physicianslinkLabel}
         />
         <CareSteps
           eyebrow={data_.careEyebrow}
@@ -52,7 +52,7 @@ export default function AboutPage() {
           titleHighlight={data_.testimonialsTitleHighlight}
           testimonials={data_.testimonials}
         />
-        <AboutCta cta={data_.finalCta} />
+        <FinalCta cta={data_.finalCta} />
       </main>
       <Footer global={global} />
     </>

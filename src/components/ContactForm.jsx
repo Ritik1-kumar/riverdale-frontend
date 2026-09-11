@@ -114,7 +114,7 @@ export default function ContactForm({
                   type="button"
                   key={doctor.id ?? doctor.name}
                   onClick={() => handleDoctorSelect(doctor)}
-                  className={`rounded-2xl border p-5 text-left transition-all duration-300 ${
+                  className={`rounded-2xl border p-5 text-left cursor-pointer transition-all duration-300 ${
                     active
                       ? "border-primary bg-mist/60 shadow-soft"
                       : "border-border bg-background hover:border-aqua"
@@ -166,7 +166,7 @@ export default function ContactForm({
                   type="button"
                   key={d.id ?? d.label}
                   onClick={() => handleDaySelect(d.label)}
-                  className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-colors ${
+                  className={`rounded-full cursor-pointer border px-5 py-2.5 text-sm font-medium transition-colors ${
                     selectedDay === d.label
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border bg-background text-foreground hover:border-aqua"
@@ -204,7 +204,7 @@ export default function ContactForm({
                   type="button"
                   key={slot.id ?? slot.label}
                   onClick={() => setSelectedTime(slot.label)}
-                  className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-colors ${
+                  className={`rounded-full cursor-pointer border px-5 py-2.5 text-sm font-medium transition-colors ${
                     selectedTime === slot.label
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border bg-background text-foreground hover:border-aqua"
@@ -263,7 +263,7 @@ export default function ContactForm({
           disabled={!canSubmit}
           className={`inline-flex w-full items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-semibold transition-all duration-300 ${
             canSubmit
-              ? "surface-deep shadow-float hover:-translate-y-0.5"
+              ? "surface-deep cursor-pointer shadow-float hover:-translate-y-0.5"
               : "cursor-not-allowed bg-mist text-muted-foreground"
           }`}
         >

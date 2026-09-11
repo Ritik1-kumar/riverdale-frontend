@@ -7,6 +7,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import TeamPage from "./pages/TeamPage";
 import PatientsPage from "./pages/PatientsPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function AppRoutes() {
   const { data, error } = useSiteData();
@@ -37,6 +38,7 @@ function AppRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <SiteDataProvider>
         <AppRoutes />
       </SiteDataProvider>

@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import AboutHero from "../components/AboutHero";
 import AboutStats from "../components/AboutStats";
 import WhyFeatures from "../components/WhyFeatures";
-import AboutCta from "../components/AboutCta";
+import FinalCta from "../components/FinalCta";
 
 export default function WhyUsPage() {
   const { data } = useSiteData();
@@ -17,7 +17,7 @@ export default function WhyUsPage() {
         <AboutHero hero={whyUs.hero} />
         <AboutStats stats={whyUs.stats} />
         <WhyFeatures features={whyUs.features} />
-        <AboutCta cta={whyUs.finalCta} />
+        <FinalCta cta={whyUs.finalCta} />
       </main>
       <Footer global={global} />
     </>

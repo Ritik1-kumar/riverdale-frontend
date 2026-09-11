@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import AboutStats from "../components/AboutStats";
 import Transformations from "../components/Transformations";
 import PatientsTestimonials from "../components/PatientsTestimonials";
-import AboutCta from "../components/AboutCta";
+import FinalCta from "../components/FinalCta";
 
 export default function PatientsPage() {
   const { data } = useSiteData();
@@ -30,7 +30,7 @@ export default function PatientsPage() {
           titleHighlight={patients.testimonialsTitleHighlight}
           testimonials={patients.testimonials}
         />
-        <AboutCta cta={patients.finalCta} />
+        <FinalCta cta={patients.finalCta} />
       </main>
       <Footer global={global} />
     </>

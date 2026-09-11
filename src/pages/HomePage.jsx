@@ -41,14 +41,6 @@ export default function HomePage() {
             image: home.hospitalAffiliationImage,
           }}
         />
-        <Doctors
-          eyebrow={home.doctorsEyebrow}
-          title={home.doctorsTitle}
-          description={home.doctorsDescription}
-          doctors={home.doctors}
-          link={home.link}
-          linkLabel={home.linkLabel}
-        />
         <Insurance
           eyebrow={home.insuranceEyebrow}
           title={home.insuranceTitle}
@@ -58,6 +50,14 @@ export default function HomePage() {
           plans={plans}
           phone={global.phone}
           phoneLink={global.phoneLink}
+        />
+        <Doctors
+          eyebrow={home.doctorsEyebrow}
+          title={home.doctorsTitle}
+          description={home.doctorsDescription}
+          doctors={home.doctors}
+          link={home.doctorlink}
+          linkLabel={home.doctorLinkLabel}
         />
         <Faq
           eyebrow={home.faqEyebrow}

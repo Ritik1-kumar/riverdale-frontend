@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AboutHero from "../components/AboutHero";
 import TeamMembers from "../components/TeamMembers";
-import AboutCta from "../components/AboutCta";
+import FinalCta from "../components/FinalCta";
 
 export default function TeamPage() {
   const { data } = useSiteData();
@@ -15,7 +15,7 @@ export default function TeamPage() {
       <main id="top">
         <AboutHero hero={team.hero} />
         <TeamMembers teamMembers={team.teamMembers} />
-        <AboutCta cta={team.finalCta} />
+        <FinalCta cta={team.finalCta} />
       </main>
       <Footer global={global} />
     </>

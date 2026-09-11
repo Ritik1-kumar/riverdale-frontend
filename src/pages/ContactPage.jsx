@@ -21,6 +21,7 @@ export default function ContactPage() {
             <ContactForm
               doctors={contact.doctors}
               confirmButtonLabel={contact.confirmButtonLabel}
+              copy={contact}
               phone={global.phone}
             />
 
