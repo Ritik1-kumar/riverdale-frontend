@@ -29,11 +29,16 @@ export default function ContactPage() {
                 clinicHours={contact.clinicHours}
                 emergencyBold={contact.emergencyBold}
                 emergencyRest={contact.emergencyRest}
+                heading={contact.clinicHoursHeading}
+                closedLabel={contact.closedLabel}
               />
               <ContactDetails
                 phone={global.phone}
                 phoneLink={global.phoneLink}
                 address={global.address}
+                heading={contact.contactDetailsHeading}
+                callUsLabel={contact.callUsLabel}
+                visitUsLabel={contact.visitUsLabel}
               />
             </div>
           </div>

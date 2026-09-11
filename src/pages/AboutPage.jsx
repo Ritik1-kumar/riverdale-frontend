@@ -31,6 +31,8 @@ export default function AboutPage() {
           title={data_.physiciansTitle}
           titleHighlight={data_.physiciansTitleHighlight}
           physicians={data_.physicians}
+          physicianslinkLabel={data.physicianslinkLabel}
+          physicianslink={data.physicianslink}
         />
         <CareSteps
           eyebrow={data_.careEyebrow}

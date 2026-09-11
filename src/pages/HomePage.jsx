@@ -46,11 +46,15 @@ export default function HomePage() {
           title={home.doctorsTitle}
           description={home.doctorsDescription}
           doctors={home.doctors}
+          link={home.link}
+          linkLabel={home.linkLabel}
         />
         <Insurance
           eyebrow={home.insuranceEyebrow}
           title={home.insuranceTitle}
           description={home.insuranceDescription}
+          cardTitle={home.insuranceCardTitle}
+          cardText={home.insuranceCardText}
           plans={plans}
           phone={global.phone}
           phoneLink={global.phoneLink}
